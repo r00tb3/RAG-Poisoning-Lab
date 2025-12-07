@@ -1,0 +1,8 @@
+Incident Response Planning
+
+An incident response plan outlines steps to handle security breaches. Phases: Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned.
+
+Key Elements:
+- Designate a response team.
+- Use tools like SIEM for real-time monitoring.
+- Test the plan with simulations.

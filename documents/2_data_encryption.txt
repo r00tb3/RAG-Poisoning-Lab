@@ -1,0 +1,12 @@
+iData Encryption Fundamentals
+
+Encryption protects data by converting it into a coded format that can only be read with a key. Types include symmetric (e.g., AES) and asymmetric (e.g., RSA).
+
+Importance in Cybersecurity:
+- Secures data in transit (HTTPS) and at rest (disk encryption).
+- Prevents unauthorized access during breaches.
+
+Implementation Tips:
+- Use strong keys and rotate them regularly.
+- Comply with standards like GDPR for data protection.
+- Tools: OpenSSL for encryption tasks.

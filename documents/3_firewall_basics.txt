@@ -1,0 +1,12 @@
+Firewall Basics
+
+A firewall is a network security system that monitors and controls incoming/outgoing traffic based on predetermined security rules.
+
+Types:
+- Hardware firewalls for network perimeters.
+- Software firewalls for individual devices.
+
+Configuration Best Practices:
+- Block unnecessary ports (e.g., close port 80 if not needed).
+- Log and alert on suspicious activity.
+- Regularly update rules to address new threats.

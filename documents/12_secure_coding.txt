@@ -1,0 +1,10 @@
+Secure Coding Practices
+
+Secure coding prevents vulnerabilities in software. Principles:
+- Validate all inputs to avoid injection attacks.
+- Use prepared statements for databases.
+- Follow OWASP guidelines.
+
+Tools:
+- Static analysis scanners like SonarQube.
+- Code reviews for security flaws.

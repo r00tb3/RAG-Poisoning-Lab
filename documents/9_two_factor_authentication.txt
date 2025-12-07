@@ -1,0 +1,11 @@
+Two-Factor Authentication (2FA)
+
+2FA adds a second verification step beyond passwords, such as SMS codes or authenticator apps.
+
+Advantages:
+- Protects against credential stuffing.
+- Easy to implement with services like Google Authenticator.
+
+Recommendations:
+- Enable on all critical accounts.
+- Use hardware keys for higher security.

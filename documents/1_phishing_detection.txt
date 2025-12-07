@@ -1,1 +1,13 @@
+Phishing Detection Basics
 
+Phishing is a cyber attack where attackers impersonate trustworthy entities to steal sensitive information. Common signs include unsolicited emails, suspicious URLs, and urgent requests for personal data.
+
+Detection Methods:
+- Email filters using machine learning to analyze headers and content.
+- URL scanning tools like VirusTotal.
+- User education on verifying sender authenticity.
+
+Best Practices:
+- Enable two-factor authentication.
+- Avoid clicking unknown links.
+- Report suspicious emails to IT security teams.

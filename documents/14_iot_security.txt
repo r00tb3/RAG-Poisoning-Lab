@@ -1,0 +1,8 @@
+IoT Security Challenges
+
+Internet of Things (IoT) devices are often vulnerable due to weak defaults. Issues: Unpatched firmware, insecure communications.
+
+Solutions:
+- Change default passwords.
+- Use network segmentation for IoT.
+- Regularly update devices.

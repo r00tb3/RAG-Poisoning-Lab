@@ -1,0 +1,12 @@
+Network Security Overview
+
+Network security protects networks from unauthorized access and attacks. Components include VPNs, intrusion detection systems (IDS), and secure Wi-Fi protocols.
+
+Common Threats:
+- Man-in-the-middle attacks.
+- DDoS floods.
+
+Strategies:
+- Segment networks to limit breach spread.
+- Use WPA3 for wireless encryption.
+- Monitor traffic with tools like Wireshark.

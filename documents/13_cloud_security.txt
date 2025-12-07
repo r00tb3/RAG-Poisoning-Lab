@@ -1,0 +1,10 @@
+Cloud Security Best Practices
+
+Cloud environments require shared responsibility models (e.g., AWS, Azure). Key areas:
+- Identity and Access Management (IAM).
+- Encryption for data in cloud storage.
+- Monitoring with CloudWatch or similar.
+
+Common Risks:
+- Misconfigured buckets leading to data exposure.
+- API vulnerabilities.

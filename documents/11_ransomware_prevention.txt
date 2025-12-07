@@ -1,0 +1,10 @@
+Ransomware Prevention
+
+Ransomware encrypts data and demands ransom. Prevention strategies:
+- Backup data regularly (offline).
+- Use endpoint protection platforms.
+- Educate on avoiding suspicious attachments.
+
+Recovery Tips:
+- Do not pay ransoms.
+- Isolate infected systems immediately.

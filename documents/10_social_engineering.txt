@@ -1,0 +1,8 @@
+Social Engineering Attacks
+
+Social engineering manipulates people into divulging confidential information. Tactics: Pretexting, baiting, quid pro quo.
+
+Defense:
+- Train employees on recognizing scams.
+- Verify requests through alternate channels.
+- Implement access controls based on least privilege.
