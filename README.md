@@ -26,8 +26,7 @@ This lab mirrors real-world RAG risks seen in enterprise AI applications.
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/r00tb3/RAG-Poisoning-Lab.git
-cd RAG-Poisoning-Lab
+git clone https://github.com/r00tb3/RAG-Poisoning-Lab.git && cd RAG-Poisoning-Lab
 ```
 
 2. Create and Activate Virtual Environment
