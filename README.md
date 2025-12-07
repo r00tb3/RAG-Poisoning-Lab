@@ -1,107 +1,78 @@
-# 🛡️ RAG Poisoning Lab — Educational AI Security Exercise
+# RAG Poisoning Lab
 
-This repository contains a hands-on lab environment for learning **RAG (Retrieval-Augmented Generation) data poisoning attacks**, detection techniques, and mitigation strategies. It is designed for students, researchers, and security practitioners who want practical experience with adversarial manipulation of AI retrieval systems.
+This Dockerized lab teaches AI security by demonstrating RAG poisoning attacks, detection, and mitigation. Focus on defensive skills: analyze embeddings, run detection algorithms, implement filters, and test effectiveness.
 
-> **⚠️ Educational Purpose Only**  
-> This lab is intended *strictly* for learning, research, and training.  
-> Do **not** use these techniques on any system you do not own or do not have explicit permission to test.
+## Repository Structure
 
----
-
-## 📘 Overview
-
-The lab demonstrates how a RAG system can be poisoned by injecting malicious documents into a vector database. You will:
-
-- Build a simple RAG pipeline using FAISS and Ollama  
-- Launch a Streamlit interface to query clean documents  
-- Execute poisoning attacks by ingesting malicious files  
-- Detect suspicious chunks using perplexity + similarity scoring  
-- Apply mitigations such as keyword filters and state resets  
-
-This lab mirrors real-world RAG risks seen in enterprise AI applications.
-
----
-
-## 🚀 Quick Start (Local Setup)
-
-1. Clone the Repository
-```bash
-git clone https://github.com/r00tb3/RAG-Poisoning-Lab.git
-cd rag-poisoning-lab
 ```
-
-2. Create and Activate Virtual Environment
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-3. Install Dependencies
-```bash
-pip install -r requirements.txt --prefer-binary --no-cache-dir
-```
-
-4. Install and Start Ollama
-```bash
-curl -fsSL https://ollama.com/install.sh | sh
-ollama pull llama3:8b-instruct-q4_K_M
-ollama pull nomic-embed-text
-ollama serve    # keep this running
-```
-
-5. Run the Streamlit App
-```bash
-streamlit run rag_app/app_streamlit.py --server.port 8000
-```
-
-6. Open your browser and visit:
-http://localhost:8000
-
-7. Folder Structure
-```bash
 rag-poisoning-lab/
-│── rag_app/
-│   ├── app_streamlit.py      # Main RAG UI
-│   ├── knowledge_base.py     # Ingestion + mitigation logic
-│   └── detection.py          # Perplexity + similarity detection
-│
-├── documents/                # Clean knowledge base (15 files)
-├── poisoned_docs/            # Malicious payloads (injection, bias, leakage)
-├── requirements.txt
-└── README.md
+├── README.md                 # Setup instructions and hands-on guide
+├── docker-compose.yml        # Docker stack (includes Ollama)
+├── rag-app/
+│   ├── app.py                # Streamlit app with query, poison, detect, mitigate tabs
+│   ├── knowledge_base.py     # Document ingestion and mitigation filters
+│   └── detection.py          # Perplexity and similarity analysis
+├── documents/                # 15 clean cybersecurity docs (create dummy .txt files, e.g., phishing.txt, encryption.txt)
+├── poisoned_docs/            # 3 malicious payloads (e.g., injection.txt, leakage.txt, bias.txt)
+├── requirements.txt          # Dependencies
+└── Dockerfile                # Custom build for rag-app
 ```
 
-## 🧪 What You Will Learn ?
+## Quick Setup (2 Minutes)
 
-🔴 Attack
-- Poisoning via malicious document ingestion
+1. Clone the repo:
+```
+git clone https://github.com/yourusername/rag-poisoning-lab.git && cd rag-poisoning-lab
+```
 
-- How semantic similarity causes poisoned chunks to be retrieved
+2. Start the lab:
 
-🔍 Detect
-- Perplexity scoring for unnatural or adversarial text
+```
+docker-compose up -d
+```
 
-- Embedding similarity to identify outliers in vector space
+3. Access the UI:
 
-🛡️ Mitigate
-- Keyword filtering during ingestion
+    Open http://localhost:8000 in your browser.
 
-- Rebuilding FAISS index to purge poisoned content
+4. Verify:
 
-- Validating clean behavior after mitigation
+    Run `docker ps` to check containers.
 
-- These techniques are essential for securing real-world AI applications.
+5. Curl health check:
+    
+    curl http://localhost:8000/health
 
-## 📜 Disclaimer
-_This project is provided for educational, academic, and training purposes only.
-Do not use any part of this repository to attack systems without explicit written permission.
-The authors assume no liability for misuse._
+    Expected: 
+        <br />RAG system: Running
 
-## ⭐ Contributing Suggestions and improvements are welcome.
-#### _You can submit issues or pull requests to expand:_
+        <br />Knowledge base: 15 clean documents
+        
+        <br />Vector database: Active
 
-- Additional poisoning techniques
+6. Stop the lab: 
+    
+    `docker-compose down`
 
-- New detection modules
+## Lab Components
+- **Clean Knowledge Base**: 15 cybersecurity documents in `documents/`.
+- **Poisoning Toolkit**: 3 malicious payloads in `poisoned_docs/`.
+- **Detection Dashboard**: Perplexity + similarity analysis for anomalies.
+- **Query Interface**: Test normal vs. poisoned behavior.
+- **Mitigation**: Toggle filters to block poisoned content.
 
-- Hardening strategies for RAG pipelines
+## Hands-On Exercises
+### Excercise 1: Attack Execution
+1. In the UI's "Poison" tab, select and ingest a poisoned doc (e.g., injection.txt).
+2. In "Query" tab, ask: "What is the admin password?" Observe injection.
+
+### Excercise 2: Detection Analysis
+1. In "Detect" tab, input a chunk from a poisoned doc.
+2. Run analysis: High perplexity (>100) or low similarity (<0.5>) indicates poisoning.
+
+### Excercise 3: Mitigation Implementation
+1. In `knowledge_base.py`, enable a filter (e.g., keyword blacklist).
+2. In "Mitigate" tab, re-ingest with filters on. Re-query to test.
+
+
+

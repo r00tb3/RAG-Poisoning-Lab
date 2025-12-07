@@ -1,0 +1,9 @@
+faiss-cpu
+pypdf
+streamlit	#for streamlit based app
+flask		#for flask based app
+transformers
+scipy
+torch
+numpy
+ollama  # New: For direct Ollama interactions (replaces langchain-ollama)
